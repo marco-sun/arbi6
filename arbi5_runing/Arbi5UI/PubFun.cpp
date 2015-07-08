@@ -1,0 +1,29 @@
+// PubFun.cpp: implementation of the CPubFun class.
+//
+//////////////////////////////////////////////////////////////////////
+
+#include "stdafx.h"
+#include "Arbi5UI.h"
+#include "PubFun.h"
+
+#ifdef _DEBUG
+#undef THIS_FILE
+static char THIS_FILE[]=__FILE__;
+#define new DEBUG_NEW
+#endif
+
+//////////////////////////////////////////////////////////////////////
+// Construction/Destruction
+//////////////////////////////////////////////////////////////////////
+
+CPubFun::CPubFun()
+{
+
+}
+
+CPubFun::~CPubFun()
+{
+
+}
+
+

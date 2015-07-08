@@ -1,0 +1,851 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(简体，中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\arbi.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#include ""l.chs\\afxprint.rc""        // printing/print preview resources\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\arbi.ico"
+IDR_MYDECDTAILTYPE      ICON                    "res\\arbiDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR 39, 33
+BEGIN
+    BUTTON      ID_SHOWLEFTBAR
+    BUTTON      ID_SHOWRIGHTBAR
+    BUTTON      ID_SHOWBOTTOMBAR
+END
+
+IDR_FILTER TOOLBAR 16, 16
+BEGIN
+    BUTTON      ID_BUTTON_FIND
+    BUTTON      ID_BUTTON_BOX
+    BUTTON      ID_BUTTON_FILTER
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "系统管理(&S)"
+    BEGIN
+        MENUITEM "系统配置",                        ID_ID_USER_CONFIG
+        MENUITEM "操作员管理",                       ID_ID_USER_CONFIG
+        MENUITEM SEPARATOR
+        MENUITEM "汇率配置",                        ID_EXCHANGE_RATE_CONFIG
+        MENUITEM SEPARATOR
+        MENUITEM "退出(&X)",                      ID_APP_EXIT
+        MENUITEM "纽约糖价格",                       ID_SUGAR
+        MENUITEM "停止渤海交易",                      ID_BOHAI
+        MENUITEM "自动渤海交易",                      ID_BOHAI2
+        MENUITEM "手动渤海交易",                      ID_BOHAI3
+    END
+    MENUITEM "锁屏",                          ID_MENUITEM_LOCK
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "关于 Arbi5系统(&A)...",           ID_APP_ABOUT
+    END
+END
+
+IDR_POP_MENU MENUEX
+BEGIN
+    POPUP "",                               65535,MFT_STRING | MFT_RIGHTORDER | MFT_RIGHTJUSTIFY,MFS_ENABLED
+    BEGIN
+        MENUITEM "停止",                          32785,MFT_STRING,MFS_ENABLED
+        MENUITEM "启动",                          32786,MFT_STRING,MFS_ENABLED
+        MENUITEM MFT_SEPARATOR
+        MENUITEM "修改",                          32788,MFT_STRING,MFS_ENABLED
+        MENUITEM "删除",                          32789,MFT_STRING,MFS_ENABLED
+    END
+END
+
+IDR_POP_INTENTION_MENU MENUEX
+BEGIN
+    POPUP "",                               65535,MFT_STRING | MFT_RIGHTORDER | MFT_RIGHTJUSTIFY,MFS_ENABLED
+    BEGIN
+        MENUITEM "添加",                          32791,MFT_STRING,MFS_ENABLED
+        MENUITEM "删除",                          32792,MFT_STRING,MFS_ENABLED
+        MENUITEM "添加策略",                        32793,MFT_STRING,MFS_ENABLED
+        MENUITEM "添加群策略",                       ID__32803,MFT_STRING,MFS_ENABLED
+        MENUITEM "价差曲线",                        ID_DATA_CURVE,MFT_STRING,MFS_ENABLED
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 筑金Arbi5 系统"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "筑金Arbi5  1.0 版",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "版权所有 (C) 2011",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_DIALOG_INTENTIONPAIR DIALOG 0, 0, 575, 202
+STYLE DS_SETFONT | WS_CHILD
+FONT 10, "宋体"
+BEGIN
+    CONTROL         "List1",IDC_LIST_INTENTION_PAIR,"SysListView32",LVS_REPORT | WS_BORDER | WS_TABSTOP,54,52,159,94
+END
+
+IDD_DIALOG_ARBI_LOG DIALOG 0, 0, 575, 202
+STYLE DS_SETFONT | WS_CHILD
+FONT 10, "宋体"
+BEGIN
+    CONTROL         "",IDC_EDIT_LOG,"RICHEDIT",TCS_MULTISELECT | WS_BORDER | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP,59,44,146,91
+END
+
+IDD_DIALOG_STRATEGY DIALOGEX 0, 0, 362, 258
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "策略编辑"
+FONT 10, "宋体", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "策略对编辑1",IDC_STATIC,7,62,348,82
+    LTEXT           "名称：",IDC_STATIC,25,31,24,8
+    EDITTEXT        ID_EDIT_NAME,51,29,65,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "合约1：",IDC_STATIC,147,22,37,8
+    EDITTEXT        IDC_EDIT_CONTRACT_OVERSEA,185,21,65,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "合约1买抛：",IDC_STATIC,104,103,42,8
+    COMBOBOX        ID_COM_OVERSEAS,148,102,32,71,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "合约2：",IDC_STATIC,147,41,37,8
+    EDITTEXT        IDC_EDIT_CONTRACT_DOMESTIC,185,39,65,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "合约2买抛：",IDC_STATIC,104,119,41,8
+    COMBOBOX        IDC_COM_DOMESTIC,148,118,32,62,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "合约1手数：",IDC_STATIC,198,103,41,8
+    EDITTEXT        IDC_EDIT_VOLUME_OVERSEA,240,101,27,12,ES_AUTOHSCROLL
+    LTEXT           "合约2手数：",IDC_STATIC,198,119,41,8
+    EDITTEXT        IDC_EDIT_VOLUME_DOMESTIC,240,118,27,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "确   定",ID_BUTTON_OK,299,237,56,14
+    GROUPBOX        "信息",IDC_STATIC,7,3,348,56
+    CONTROL         "编辑该策略",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,19,79,53,10
+    LTEXT           "合约1加档：",IDC_STATIC,276,103,42,8
+    EDITTEXT        IDC_EDIT_ADD_OVERSEA,318,101,27,12,ES_AUTOHSCROLL
+    LTEXT           "合约2加档：",IDC_STATIC,276,119,42,8
+    EDITTEXT        IDC_EDIT_ADD_DOMESTIC,318,118,27,12,ES_AUTOHSCROLL
+    LTEXT           "价差",IDC_STATIC,83,81,16,8
+    COMBOBOX        IDC_COMBO_COMPARE1,103,78,53,66,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_DIFF1,159,78,40,14,ES_AUTOHSCROLL
+    LTEXT           "时触发策略",IDC_STATIC,205,81,38,8
+    GROUPBOX        "策略对编辑2",IDC_STATIC,7,151,348,82
+    LTEXT           "合约1买抛：",IDC_STATIC,106,192,42,8
+    COMBOBOX        ID_COM_OVERSEAS2,150,191,32,80,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "合约2买抛：",IDC_STATIC,106,208,41,8
+    COMBOBOX        IDC_COM_DOMESTIC2,150,207,32,69,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "合约1手数：",IDC_STATIC,200,192,41,8
+    EDITTEXT        IDC_EDIT_VOLUME_OVERSEA2,242,190,27,12,ES_AUTOHSCROLL
+    LTEXT           "合约2手数：",IDC_STATIC,200,208,41,8
+    EDITTEXT        IDC_EDIT_VOLUME_DOMESTIC2,242,207,27,12,ES_AUTOHSCROLL
+    CONTROL         "编辑该策略",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,19,169,53,10
+    LTEXT           "合约1加档：",IDC_STATIC,278,192,41,8
+    EDITTEXT        IDC_EDIT_ADD_OVERSEA2,320,190,27,12,ES_AUTOHSCROLL
+    LTEXT           "合约2加档：",IDC_STATIC,278,208,41,8
+    EDITTEXT        IDC_EDIT_ADD_DOMESTIC2,320,207,27,12,ES_AUTOHSCROLL
+    LTEXT           "价差",IDC_STATIC,83,171,16,8
+    COMBOBOX        IDC_COMBO_COMPARE2,103,168,53,83,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_DIFF2,159,168,40,14,ES_AUTOHSCROLL
+    LTEXT           "时触发策略",IDC_STATIC,205,171,38,8
+    CONTROL         "编辑策略后自动启动策略",IDC_CHECK_EDIT_AND_START,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,240,124,10
+    LTEXT           "合约1类型：",IDC_STATIC,16,103,42,8
+    COMBOBOX        ID_COM_OVERSEAS_TYPE,60,102,32,71,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "合约2类型：",IDC_STATIC,16,119,41,8
+    COMBOBOX        IDC_COM_DOMESTIC_TYPE,60,118,32,62,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "合约1类型：",IDC_STATIC,19,191,42,8
+    COMBOBOX        ID_COM_OVERSEAS_TYPE2,63,191,32,71,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "合约2类型：",IDC_STATIC,19,207,41,8
+    COMBOBOX        IDC_COM_DOMESTIC_TYPE2,63,207,32,62,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_MAX_POSITIONS,298,30,27,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "限制套数：",IDC_STATIC,256,32,37,8
+    CONTROL         "",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,133,23,9,8
+    CONTROL         "",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,133,41,9,8
+    LTEXT           "选择第一腿合约",IDC_STATIC,111,9,53,8
+    CONTROL         "钓鱼",IDC_CHECK_FISH1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,276,80,31,10
+    CONTROL         "钓鱼",IDC_CHECK_FISH2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,276,170,31,10
+    PUSHBUTTON      "反转策略",ID_BUTTON_TURN_OVER,157,237,56,14
+END
+
+IDD_DIALOG_STRATEGY_INFO DIALOG 0, 0, 575, 202
+STYLE DS_SETFONT | WS_CHILD
+FONT 10, "宋体"
+BEGIN
+    CONTROL         "List1",IDC_LIST_STRATEGY_INFO,"SysListView32",LVS_REPORT | WS_BORDER | WS_TABSTOP,54,52,354,94
+END
+
+IDD_DIALOG_INTENTION DIALOG 0, 0, 221, 115
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Intention"
+FONT 10, "宋体"
+BEGIN
+    EDITTEXT        ID_EDIT_NAME,66,17,129,16,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_CONTRACT_OVERSEA,66,37,63,16,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_CONTRACT_DOMESTIC,66,57,63,16,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_FIRST_VOL,162,37,33,16,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_EDIT_SECOND_VOL,162,56,33,16,ES_AUTOHSCROLL | ES_NUMBER
+    PUSHBUTTON      "添    加",IDC_BUTTON_ADD_INTENTION,85,89,61,19
+    LTEXT           "名称：",IDC_STATIC,24,21,29,10
+    LTEXT           "第一合约：",IDC_STATIC,24,40,38,11
+    LTEXT           "第二合约：",IDC_STATIC,24,61,37,13
+    GROUPBOX        "添加信息",IDC_STATIC,7,3,207,79
+    LTEXT           "手数：",IDC_STATIC,137,40,22,10
+    LTEXT           "手数：",IDC_STATIC,137,59,22,10
+END
+
+IDD_DIALOG_EXCHANGE_RATE DIALOG 0, 0, 187, 94
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "汇率"
+FONT 10, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "设   置",IDOK,129,73,50,14
+    GROUPBOX        "汇率修改",IDC_STATIC,7,3,173,66
+    LTEXT           "美元汇率：",IDC_STATIC,31,24,38,8
+    LTEXT           "日元汇率：",IDC_STATIC,31,46,38,8
+    EDITTEXT        IDC_EDIT_DOLLAR_EXR,71,22,87,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_YEN_EXR,71,43,87,14,ES_AUTOHSCROLL
+END
+
+IDD_DIALOG_DEAL_WARNING DIALOG 0, 0, 187, 94
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "告警处理"
+FONT 10, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "第一腿撤销",ID_PROSESS_FIRST_OK,13,72,57,15
+    PUSHBUTTON      "第二腿补单",ID_ADD_SECOND_OK,114,72,58,15
+    LTEXT           "Static",IDC_STATIC_WARNING,16,20,155,40
+    GROUPBOX        "告警信息",IDC_STATIC,7,2,173,67
+END
+
+IDD_DIALOG_USER_MANAGE DIALOG 0, 0, 179, 118
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "用户管理"
+FONT 10, "宋体"
+BEGIN
+    EDITTEXT        IDC_EDIT_OLDPWD,79,35,84,14,ES_PASSWORD | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_NEWPWD,79,54,84,14,ES_PASSWORD | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_CONFIRM_PWD,79,74,84,14,ES_PASSWORD | ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "确  认",IDOK,7,97,50,14
+    PUSHBUTTON      "取  消",IDCANCEL,122,97,50,14
+    GROUPBOX        "密码修改",IDC_STATIC,7,3,166,90
+    LTEXT           "用户：",IDC_STATIC,22,20,23,8
+    EDITTEXT        IDC_EDIT_USER,79,17,84,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "旧密码：",IDC_STATIC,22,39,31,8
+    LTEXT           "新密码：",IDC_STATIC,22,58,31,8
+    LTEXT           "新密码确认：",IDC_STATIC,22,76,46,8
+END
+
+IDD_DIALOG_USER_LOAD DIALOG 0, 0, 177, 94
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "用户登录"
+FONT 10, "宋体"
+BEGIN
+    EDITTEXT        IDC_EDIT_PWD,54,41,104,14,ES_PASSWORD | ES_AUTOHSCROLL
+    PUSHBUTTON      "登   录",IDC_BUTTON_LOAD,109,68,61,17
+    EDITTEXT        IDC_EDIT_USER,54,19,104,14,ES_AUTOHSCROLL | ES_READONLY
+    GROUPBOX        "用户信息",IDC_STATIC,7,3,162,61
+    LTEXT           "密码：",IDC_STATIC,17,44,33,8
+    LTEXT           "用户名：",IDC_STATIC,17,22,33,8
+END
+
+IDD_DIALOG_AUTH DIALOG 0, 0, 187, 94
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "系统授权"
+FONT 10, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "确认",IDOK,130,73,50,14
+    GROUPBOX        "本机特征码",IDC_STATIC,7,7,173,29
+    EDITTEXT        IDC_EDIT_LOCAL_CODE,18,16,154,14,ES_AUTOHSCROLL | ES_READONLY
+    GROUPBOX        "请填写授权码",IDC_STATIC,7,38,173,33
+    EDITTEXT        IDC_EDIT_AUTH_CODE,17,52,154,14,ES_AUTOHSCROLL
+END
+
+IDD_DIALOG1 DIALOGEX 0, 0, 273, 182
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "纽约糖价格"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,93,140,50,14
+    LTEXT           "昨日纽约糖价格",IDC_STATIC,36,22,102,12
+    LTEXT           "纽约糖3月SBH3：",IDC_STATIC,37,56,62,8
+    LTEXT           "纽约糖5月SBK3：",IDC_STATIC,39,98,61,8
+    EDITTEXT        IDC_EDIT_SUGAR,105,53,84,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_SUGAR2,107,94,85,16,ES_AUTOHSCROLL
+END
+
+IDD_DIALOG_DATA_CURVE DIALOGEX 0, 0, 713, 371
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "数据曲线"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+IDD_DIALOG_STRATEGY_MORE DIALOGEX 0, 0, 350, 182
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "策略编辑"
+FONT 10, "宋体", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "策略对",IDC_STATIC,7,62,336,96
+    LTEXT           "名称：",IDC_STATIC,25,31,24,8
+    EDITTEXT        ID_EDIT_NAME,51,29,65,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "合约1：",IDC_STATIC,147,22,37,8
+    EDITTEXT        IDC_EDIT_CONTRACT_OVERSEA,185,21,65,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "合约1买抛：",IDC_STATIC,104,126,42,8
+    COMBOBOX        ID_COM_OVERSEAS,148,124,32,71,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "合约2：",IDC_STATIC,147,41,37,8
+    EDITTEXT        IDC_EDIT_CONTRACT_DOMESTIC,185,39,65,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "合约2买抛：",IDC_STATIC,104,141,41,8
+    COMBOBOX        IDC_COM_DOMESTIC,148,140,32,62,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "确   定",ID_BUTTON_OK,287,161,56,14
+    GROUPBOX        "信息",IDC_STATIC,7,3,336,56
+    LTEXT           "止盈点:",IDC_STATIC,256,82,27,8
+    EDITTEXT        IDC_EDIT_DIFF2,283,78,57,12,ES_AUTOHSCROLL
+    LTEXT           "价差",IDC_STATIC,15,81,16,8
+    COMBOBOX        IDC_COMBO_COMPARE1,35,78,53,66,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_DIFF1,91,78,40,14,ES_AUTOHSCROLL
+    LTEXT           "时触发策略",IDC_STATIC,137,81,38,8
+    CONTROL         "编辑策略后自动启动策略",IDC_CHECK_EDIT_AND_START,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,165,124,10
+    LTEXT           "合约1类型：",IDC_STATIC,16,126,42,8
+    COMBOBOX        ID_COM_OVERSEAS_TYPE,60,124,32,71,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "合约2类型：",IDC_STATIC,16,141,41,8
+    COMBOBOX        IDC_COM_DOMESTIC_TYPE,60,140,32,62,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,133,23,9,8
+    CONTROL         "",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,133,41,9,8
+    LTEXT           "选择第一腿合约",IDC_STATIC,111,9,53,8
+    LTEXT           "步长:",IDC_STATIC,183,82,20,8
+    EDITTEXT        IDC_EDIT_STEP,203,78,40,14,ES_AUTOHSCROLL
+    LTEXT           "合约1手数：",IDC_STATIC,191,126,41,8
+    EDITTEXT        IDC_EDIT_VOLUME_OVERSEA,231,124,27,12,ES_AUTOHSCROLL
+    LTEXT           "合约2手数：",IDC_STATIC,191,141,41,8
+    EDITTEXT        IDC_EDIT_VOLUME_DOMESTIC,231,140,27,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_MAX_POSITIONS,117,102,35,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "每档套数:",IDC_STATIC,75,104,37,8
+    CONTROL         "钓鱼",IDC_CHECK_FISH1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,233,104,31,10
+    CONTROL         "不平仓",IDC_CHECK_PING,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,176,104,34,10
+    EDITTEXT        IDC_EDIT_MAX_COUNT,27,102,27,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "共",IDC_STATIC,14,104,8,8
+    LTEXT           "档",IDC_STATIC,59,104,12,8
+    LTEXT           "合约1加档：",IDC_STATIC,266,126,42,8
+    EDITTEXT        IDC_EDIT_ADD_OVERSEA,309,124,27,12,ES_AUTOHSCROLL
+    LTEXT           "合约2加档：",IDC_STATIC,266,142,42,8
+    EDITTEXT        IDC_EDIT_ADD_DOMESTIC,309,142,27,12,ES_AUTOHSCROLL
+END
+
+IDD_DIALOG_ARBI_REPORT DIALOG 0, 0, 575, 202
+STYLE DS_SETFONT | WS_CHILD
+FONT 10, "宋体"
+BEGIN
+    CONTROL         "",IDC_EDIT_LOG,"RICHEDIT",TCS_MULTISELECT | WS_BORDER | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP,59,44,146,91
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "FileDescription", "Arbi Microsoft 基础类应用程序"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "Arbi"
+            VALUE "LegalCopyright", "版权所有 (C) 2005"
+            VALUE "OriginalFilename", "Arbi.EXE"
+            VALUE "ProductName", "Arbi 应用程序"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_DIALOG_INTENTIONPAIR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 568
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 195
+    END
+
+    IDD_DIALOG_ARBI_LOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 568
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 195
+    END
+
+    IDD_DIALOG_STRATEGY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 355
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 251
+    END
+
+    IDD_DIALOG_STRATEGY_INFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 568
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 195
+    END
+
+    IDD_DIALOG_INTENTION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 214
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 108
+    END
+
+    IDD_DIALOG_EXCHANGE_RATE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+
+    IDD_DIALOG_DEAL_WARNING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 87
+    END
+
+    IDD_DIALOG_USER_MANAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 172
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 111
+    END
+
+    IDD_DIALOG_USER_LOAD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 170
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+
+    IDD_DIALOG_AUTH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+
+    IDD_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 266
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 175
+    END
+
+    IDD_DIALOG_DATA_CURVE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 706
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 369
+    END
+
+    IDD_DIALOG_STRATEGY_MORE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 343
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 175
+    END
+
+    IDD_DIALOG_ARBI_REPORT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 568
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 195
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_DIALOG_STRATEGY DLGINIT
+BEGIN
+    ID_COM_OVERSEAS, 0x403, 3, 0
+0xf2c2, "\000" 
+    ID_COM_OVERSEAS, 0x403, 3, 0
+0xd7c5, "\000" 
+    IDC_COM_DOMESTIC, 0x403, 3, 0
+0xf2c2, "\000" 
+    IDC_COM_DOMESTIC, 0x403, 3, 0
+0xd7c5, "\000" 
+    IDC_COMBO_COMPARE1, 0x403, 9, 0
+0xf3b4, 0xdad3, 0xc8b5, 0xdad3, "\000" 
+    IDC_COMBO_COMPARE1, 0x403, 9, 0
+0xa1d0, 0xdad3, 0xc8b5, 0xdad3, "\000" 
+    ID_COM_OVERSEAS2, 0x403, 3, 0
+0xf2c2, "\000" 
+    ID_COM_OVERSEAS2, 0x403, 3, 0
+0xd7c5, "\000" 
+    IDC_COM_DOMESTIC2, 0x403, 3, 0
+0xf2c2, "\000" 
+    IDC_COM_DOMESTIC2, 0x403, 3, 0
+0xd7c5, "\000" 
+    IDC_COMBO_COMPARE2, 0x403, 9, 0
+0xf3b4, 0xdad3, 0xc8b5, 0xdad3, "\000" 
+    IDC_COMBO_COMPARE2, 0x403, 9, 0
+0xa1d0, 0xdad3, 0xc8b5, 0xdad3, "\000" 
+    ID_COM_OVERSEAS_TYPE, 0x403, 5, 0
+0xaabf, 0xd6b2, "\000" 
+    ID_COM_OVERSEAS_TYPE, 0x403, 5, 0
+0xbdc6, 0xf1bd, "\000" 
+    ID_COM_OVERSEAS_TYPE, 0x403, 5, 0
+0xbdc6, 0xd6b2, "\000" 
+    IDC_COM_DOMESTIC_TYPE, 0x403, 5, 0
+0xaabf, 0xd6b2, "\000" 
+    IDC_COM_DOMESTIC_TYPE, 0x403, 5, 0
+0xbdc6, 0xf1bd, "\000" 
+    IDC_COM_DOMESTIC_TYPE, 0x403, 5, 0
+0xbdc6, 0xd6b2, "\000" 
+    ID_COM_OVERSEAS_TYPE2, 0x403, 5, 0
+0xaabf, 0xd6b2, "\000" 
+    ID_COM_OVERSEAS_TYPE2, 0x403, 5, 0
+0xbdc6, 0xf1bd, "\000" 
+    ID_COM_OVERSEAS_TYPE2, 0x403, 5, 0
+0xbdc6, 0xd6b2, "\000" 
+    IDC_COM_DOMESTIC_TYPE2, 0x403, 5, 0
+0xaabf, 0xd6b2, "\000" 
+    IDC_COM_DOMESTIC_TYPE2, 0x403, 5, 0
+0xbdc6, 0xf1bd, "\000" 
+    IDC_COM_DOMESTIC_TYPE2, 0x403, 5, 0
+0xbdc6, 0xd6b2, "\000" 
+    0
+END
+
+IDD_DIALOG_STRATEGY_MORE DLGINIT
+BEGIN
+    ID_COM_OVERSEAS, 0x403, 3, 0
+0xf2c2, "\000" 
+    ID_COM_OVERSEAS, 0x403, 3, 0
+0xd7c5, "\000" 
+    IDC_COM_DOMESTIC, 0x403, 3, 0
+0xf2c2, "\000" 
+    IDC_COM_DOMESTIC, 0x403, 3, 0
+0xd7c5, "\000" 
+    IDC_COMBO_COMPARE1, 0x403, 9, 0
+0xf3b4, 0xdad3, 0xc8b5, 0xdad3, "\000" 
+    IDC_COMBO_COMPARE1, 0x403, 9, 0
+0xa1d0, 0xdad3, 0xc8b5, 0xdad3, "\000" 
+    ID_COM_OVERSEAS_TYPE, 0x403, 5, 0
+0xaabf, 0xd6b2, "\000" 
+    ID_COM_OVERSEAS_TYPE, 0x403, 5, 0
+0xbdc6, 0xf1bd, "\000" 
+    ID_COM_OVERSEAS_TYPE, 0x403, 5, 0
+0xbdc6, 0xd6b2, "\000" 
+    IDC_COM_DOMESTIC_TYPE, 0x403, 5, 0
+0xaabf, 0xd6b2, "\000" 
+    IDC_COM_DOMESTIC_TYPE, 0x403, 5, 0
+0xbdc6, 0xf1bd, "\000" 
+    IDC_COM_DOMESTIC_TYPE, 0x403, 5, 0
+0xbdc6, 0xd6b2, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "Arbi\n\nMyDecDtail\n\n\nMyArbi.Document\nMyArbi Document"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_APP_TITLE       "Arbi"
+    AFX_IDS_IDLEMESSAGE     "就绪"
+END
+
+STRINGTABLE
+BEGIN
+    ID_INDICATOR_EXT        "扩展名"
+    ID_INDICATOR_CAPS       "大写"
+    ID_INDICATOR_NUM        "数字"
+    ID_INDICATOR_SCRL       "滚动"
+    ID_INDICATOR_OVR        "改写"
+    ID_INDICATOR_REC        "记录"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_NEW             "建立新文档\n新建"
+    ID_FILE_OPEN            "打开一个现有文档\n打开"
+    ID_FILE_CLOSE           "关闭活动文档\n关闭"
+    ID_FILE_SAVE            "保存活动文档\n保存"
+    ID_FILE_SAVE_AS         "将活动文档以一个新文件名保存\n另存为"
+    ID_FILE_PAGE_SETUP      "改变打印选项\n页面设置"
+    ID_FILE_PRINT_SETUP     "改变打印机及打印选项\n打印设置"
+    ID_FILE_PRINT           "打印活动文档\n打印"
+    ID_FILE_PRINT_PREVIEW   "显示整页\n打印预览"
+END
+
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "显示程序信息，版本号和版权\n关于"
+    ID_APP_EXIT             "退出应用程序；提示保存文档\n退出"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_MRU_FILE1       "打开该文档"
+    ID_FILE_MRU_FILE2       "打开该文档"
+    ID_FILE_MRU_FILE3       "打开该文档"
+    ID_FILE_MRU_FILE4       "打开该文档"
+    ID_FILE_MRU_FILE5       "打开该文档"
+    ID_FILE_MRU_FILE6       "打开该文档"
+    ID_FILE_MRU_FILE7       "打开该文档"
+    ID_FILE_MRU_FILE8       "打开该文档"
+    ID_FILE_MRU_FILE9       "打开该文档"
+    ID_FILE_MRU_FILE10      "打开该文档"
+    ID_FILE_MRU_FILE11      "打开该文档"
+    ID_FILE_MRU_FILE12      "打开该文档"
+    ID_FILE_MRU_FILE13      "打开该文档"
+    ID_FILE_MRU_FILE14      "打开该文档"
+    ID_FILE_MRU_FILE15      "打开该文档"
+    ID_FILE_MRU_FILE16      "打开该文档"
+END
+
+STRINGTABLE
+BEGIN
+    ID_NEXT_PANE            "切换到下一个窗格\n下一窗格"
+    ID_PREV_PANE            "切换回前一个窗格\n前一窗格"
+END
+
+STRINGTABLE
+BEGIN
+    ID_WINDOW_SPLIT         "将活动的窗口分隔成窗格\n分隔"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_CLEAR           "删除被选对象\n删除"
+    ID_EDIT_CLEAR_ALL       "全部删除\n全部删除"
+    ID_EDIT_COPY            "复制被选对象并将其置于剪贴板上\n复制"
+    ID_EDIT_CUT             "剪切被选对象并将其置于剪贴板上\n剪切"
+    ID_EDIT_FIND            "查找指定的正文\n查找"
+    ID_EDIT_PASTE           "插入剪贴板内容\n粘贴"
+    ID_EDIT_REPEAT          "重复上一步操作\n重复"
+    ID_EDIT_REPLACE         "用不同的正文替换指定的正文\n替换"
+    ID_EDIT_SELECT_ALL      "选择整个文档\n选择全部"
+    ID_EDIT_UNDO            "撤消最后一步操作\n撤消"
+    ID_EDIT_REDO            "重新执行先前已撤消的操作\n重新执行"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_TOOLBAR         "配置系统参数等"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCSIZE          "改变窗口大小"
+    AFX_IDS_SCMOVE          "改变窗口位置"
+    AFX_IDS_SCMINIMIZE      "将窗口缩小成图标"
+    AFX_IDS_SCMAXIMIZE      "把窗口放大到最大尺寸"
+    AFX_IDS_SCNEXTWINDOW    "切换到下一个文档窗口"
+    AFX_IDS_SCPREVWINDOW    "切换到先前的文档窗口"
+    AFX_IDS_SCCLOSE         "关闭活动的窗口并提示保存所有文档"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCRESTORE       "把窗口恢复到正常大小"
+    AFX_IDS_SCTASKLIST      "激活任务表"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "关闭打印预览模式\n取消预阅"
+END
+
+STRINGTABLE
+BEGIN
+    ID_SHOWLEFTBAR          "打开控制窗口\n控制窗口"
+    ID_BUTTON32772          "打开编辑窗口\n编辑窗口"
+END
+
+STRINGTABLE
+BEGIN
+    ID_STOP                 "暂停此策略运行"
+    ID_START                "启动此策略"
+END
+
+#endif    // 中文(简体，中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\arbi.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#include "l.chs\afxprint.rc"        // printing/print preview resources
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

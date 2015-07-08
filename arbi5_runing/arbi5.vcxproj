@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName />
+    <SccLocalPath />
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Release\arbi5.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+      <AdditionalIncludeDirectories>./rohon</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Midl>
+      <TypeLibraryName>.\Release\arbi5.tlb</TypeLibraryName>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release\arbi5.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <SubSystem>Console</SubSystem>
+      <OutputFile>.\Release\arbi5.exe</OutputFile>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;RohonClientApi.lib;RohonMDClientApi.lib;thostmduserapi.lib;thosttraderapi.lib;EsunnyApi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>.\rohon;.\sfit;.\esunny</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <MinimalRebuild>true</MinimalRebuild>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\Debug\arbi5.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <ObjectFileName>.\Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <AdditionalIncludeDirectories>./rohon;./hiredis</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Midl>
+      <TypeLibraryName>.\Debug\arbi5.tlb</TypeLibraryName>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug\arbi5.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OutputFile>.\Debug\arbi5.exe</OutputFile>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;RohonClientApi.lib;RohonMDClientApi.lib;thostmduserapi.lib;thosttraderapi.lib;EsunnyApi.lib;hiredis.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>.\rohon;.\sfit;.\esunny;.\hiredis</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="arbi5.cpp" />
+    <ClCompile Include="ArbitrageComparablePriceExpression.cpp" />
+    <ClCompile Include="ArbitrageStrategy.cpp" />
+    <ClCompile Include="CancelQueue.cpp" />
+    <ClCompile Include="ClientSock.cpp" />
+    <ClCompile Include="commodity.cpp" />
+    <ClCompile Include="Condition.cpp" />
+    <ClCompile Include="Contract.cpp" />
+    <ClCompile Include="DayTradingStrategy.cpp" />
+    <ClCompile Include="Dealer.cpp" />
+    <ClCompile Include="DealHistory.cpp" />
+    <ClCompile Include="DiffExpression.cpp" />
+    <ClCompile Include="EsunnyDealer.cpp" />
+    <ClCompile Include="EsunnyPriceSource.cpp" />
+    <ClCompile Include="Exchange.cpp" />
+    <ClCompile Include="FishShootStrategy.cpp" />
+    <ClCompile Include="FishStrategy.cpp" />
+    <ClCompile Include="FixClientSock.cpp" />
+    <ClCompile Include="FixDealer.cpp" />
+    <ClCompile Include="FixDecode.cpp" />
+    <ClCompile Include="FixEncode.cpp" />
+    <ClCompile Include="FixEntry.cpp" />
+    <ClCompile Include="FixPatsDealer.cpp" />
+    <ClCompile Include="FixPatsPriceSource.cpp" />
+    <ClCompile Include="FixPrice.cpp" />
+    <ClCompile Include="FixPubTools.cpp" />
+    <ClCompile Include="FixTcpTrans.cpp" />
+    <ClCompile Include="FixThread.cpp" />
+    <ClCompile Include="FixThreadMsgPool.cpp" />
+    <ClCompile Include="FixTimerManager.cpp" />
+    <ClCompile Include="HoldingCounter.cpp" />
+    <ClCompile Include="HoldingGuard.cpp" />
+    <ClCompile Include="ImportExpression.cpp" />
+    <ClCompile Include="IntentionPair.cpp" />
+    <ClCompile Include="KnownContract.cpp" />
+    <ClCompile Include="Leg.cpp" />
+    <ClCompile Include="LogPriceStrategy.cpp" />
+    <ClCompile Include="LogStore.cpp" />
+    <ClCompile Include="MockAsyncDealer.cpp" />
+    <ClCompile Include="MockAsyncPriceSource.cpp" />
+    <ClCompile Include="NameConverter.cpp" />
+    <ClCompile Include="Order.cpp" />
+    <ClCompile Include="otherDealer.cpp" />
+    <ClCompile Include="otherPriceSource.cpp" />
+    <ClCompile Include="PatsApiDealer.cpp" />
+    <ClCompile Include="PatsApiPriceSource.cpp" />
+    <ClCompile Include="Persistence.cpp" />
+    <ClCompile Include="Price.cpp" />
+    <ClCompile Include="PriceSource.cpp" />
+    <ClCompile Include="RohonDealer.cpp" />
+    <ClCompile Include="RohonPriceSource.cpp" />
+    <ClCompile Include="SfitDealer.cpp" />
+    <ClCompile Include="SfitPriceSource.cpp" />
+    <ClCompile Include="ShootStrategy.cpp" />
+    <ClCompile Include="SimFixEngine.cpp" />
+    <ClCompile Include="SimPatsApiEngine.cpp" />
+    <ClCompile Include="SpDealer.cpp" />
+    <ClCompile Include="SPInfor.cpp" />
+    <ClCompile Include="SpPriceSource.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">stdafx.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="Strategy.cpp" />
+    <ClCompile Include="TimeInterval.cpp" />
+    <ClCompile Include="TwoLegStrategy.cpp" />
+    <ClCompile Include="Uuid.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ArbitrageComparablePriceExpression.h" />
+    <ClInclude Include="ArbitrageStrategy.h" />
+    <ClInclude Include="CancelQueue.h" />
+    <ClInclude Include="ClientSock.h" />
+    <ClInclude Include="commodity.h" />
+    <ClInclude Include="Condition.h" />
+    <ClInclude Include="Contract.h" />
+    <ClInclude Include="DayTradingStrategy.h" />
+    <ClInclude Include="Dealer.h" />
+    <ClInclude Include="DealHistory.h" />
+    <ClInclude Include="DiffExpression.h" />
+    <ClInclude Include="EsunnyDealer.h" />
+    <ClInclude Include="EsunnyPriceSource.h" />
+    <ClInclude Include="Exchange.h" />
+    <ClInclude Include="FishShootStrategy.h" />
+    <ClInclude Include="FishStrategy.h" />
+    <ClInclude Include="FixClientSock.h" />
+    <ClInclude Include="FixDealer.h" />
+    <ClInclude Include="FixDecode.h" />
+    <ClInclude Include="FixEncode.h" />
+    <ClInclude Include="FixEntry.h" />
+    <ClInclude Include="fixmsgdef.h" />
+    <ClInclude Include="FixPatsDealer.h" />
+    <ClInclude Include="FixPatsPriceSource.h" />
+    <ClInclude Include="FixPrice.h" />
+    <ClInclude Include="FixPubTools.h" />
+    <ClInclude Include="FixTcpTrans.h" />
+    <ClInclude Include="FixThread.h" />
+    <ClInclude Include="FixThreadMsgPool.h" />
+    <ClInclude Include="FixTimerManager.h" />
+    <ClInclude Include="HoldingCounter.h" />
+    <ClInclude Include="HoldingGuard.h" />
+    <ClInclude Include="ImportExpression.h" />
+    <ClInclude Include="IntentionPair.h" />
+    <ClInclude Include="KnownContract.h" />
+    <ClInclude Include="Leg.h" />
+    <ClInclude Include="LogPriceStrategy.h" />
+    <ClInclude Include="LogStore.h" />
+    <ClInclude Include="MockAsyncDealer.h" />
+    <ClInclude Include="MockAsyncPriceSource.h" />
+    <ClInclude Include="NameConverter.h" />
+    <ClInclude Include="Order.h" />
+    <ClInclude Include="otherDealer.h" />
+    <ClInclude Include="otherPriceSource.h" />
+    <ClInclude Include="PatsApiDealer.h" />
+    <ClInclude Include="patsapiinnermsgdef.h" />
+    <ClInclude Include="patsapimsgdef.h" />
+    <ClInclude Include="PatsApiPriceSource.h" />
+    <ClInclude Include="patsIntf.h" />
+    <ClInclude Include="Persistence.h" />
+    <ClInclude Include="Price.h" />
+    <ClInclude Include="PriceSource.h" />
+    <ClInclude Include="RohonDealer.h" />
+    <ClInclude Include="RohonPriceSource.h" />
+    <ClInclude Include="SfitDealer.h" />
+    <ClInclude Include="SfitPriceSource.h" />
+    <ClInclude Include="ShootStrategy.h" />
+    <ClInclude Include="SimFixEngine.h" />
+    <ClInclude Include="SimPatsApiEngine.h" />
+    <ClInclude Include="SpDealer.h" />
+    <ClInclude Include="SPInfor.h" />
+    <ClInclude Include="SpPriceSource.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="Strategy.h" />
+    <ClInclude Include="TimeInterval.h" />
+    <ClInclude Include="TwoLegStrategy.h" />
+    <ClInclude Include="Uuid.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="hiredis\hiredis.lib" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
