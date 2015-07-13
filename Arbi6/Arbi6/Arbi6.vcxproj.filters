@@ -1,0 +1,398 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="UserImages.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\Arbi6.rc2">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\Arbi6Doc.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\Arbi6.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\Toolbar.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\Toolbar256.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Arbi6.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFrm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbi6Doc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbi6View.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="IntentionDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="IntentionPairDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="scbarg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="sizecbar.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="StrategyDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="StrategyInfoDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="StrategyMoreDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="UserLoadDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LogList.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ListCtrlCl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ListCtrlEditBase.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ListCtrlMap.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="HeaderCtrlCl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Info.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CoolTabCtrl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="arbi\Exchange.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LogStore.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="arbi\Price.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="arbi\KnownContract.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="arbi\ArbitrageComparablePriceExpression.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="arbi\commodity.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="arbi\Contract.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="arbi\PriceSource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\Utils.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="arbi\DiffExpression.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="arbi\Condition.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="arbi\CancelQueue.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="arbi\Dealer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="arbi\Order.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="arbi\Uuid.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="arbi\HoldingCounter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="arbi\HoldingGuard.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="arbi\ArbitrageStrategy.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="arbi\Strategy.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="arbi\DayTradingStrategy.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="arbi\DealHistory.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="arbi\ImportExpression.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="arbi\IntentionPair.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="arbi\Persistence.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="arbi\TwoLegStrategy.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="arbi\Leg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="arbi\FishShootStrategy.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="arbi\FishStrategy.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="arbi\ShootStrategy.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ctp\SfitDealer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ctp\SfitPriceSource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="cats\CatsApiEngine.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="cats\CatsDealer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="cats\CatsPriceSource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ArbiLogDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ArbiReportDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DealerHistoryLog.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DealWarningDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Arbi6.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrm.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Arbi6Doc.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Arbi6View.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="IntentionDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="IntentionPairDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="scbarg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="sizecbar.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="StrategyDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="StrategyInfoDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="StrategyMoreDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="UserLoadDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="LogList.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ListCtrlCl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ListCtrlEditBase.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ListCtrlMap.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="HeaderCtrlCl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CoolTabCtrl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="arbi\Exchange.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="LogStore.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="arbi\Price.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="arbi\KnownContract.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="arbi\ArbitrageComparablePriceExpression.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="arbi\commodity.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="arbi\Contract.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="arbi\PriceSource.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\Utils.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="arbi\DiffExpression.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="arbi\Condition.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="arbi\CancelQueue.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="arbi\Dealer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="arbi\Order.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="arbi\Uuid.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="arbi\HoldingCounter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="arbi\HoldingGuard.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="arbi\ArbitrageStrategy.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="arbi\Strategy.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="arbi\DayTradingStrategy.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="arbi\DealHistory.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="arbi\ImportExpression.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="arbi\IntentionPair.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="arbi\Persistence.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="arbi\TwoLegStrategy.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="arbi\Leg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="arbi\FishShootStrategy.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="arbi\FishStrategy.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="arbi\ShootStrategy.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ctp\SfitDealer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ctp\SfitPriceSource.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="cats\CatsApiEngine.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="cats\CatsDealer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="cats\CatsPriceSource.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ArbiLogDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ArbiReportDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DealerHistoryLog.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DealWarningDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Arbi6.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

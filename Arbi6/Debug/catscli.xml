@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Root>
+<TASP IPAddr="127.0.0.1"
+      Port="18880"
+      TimeOut="30"
+      ServerName="CATS"
+      User="catsuser"
+      Password="GV2gODkBbGg=" 
+      compress="0"
+      crypt="0"
+      />
+
+<TASSL IPAddr="127.0.0.1"
+      Port="4433"
+      TimeOut="30"
+      ServerName="CATS"
+      User="catsuser"
+      Password="GV2gODkBbGg="
+      compress="0"
+      certfile="sslclientcert.pem"
+      cafile="cacert.pem"
+      privatekey="sslclientkey.pem"
+      /> 
+</Root>

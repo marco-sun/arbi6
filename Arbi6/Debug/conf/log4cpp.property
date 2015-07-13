@@ -1,0 +1,152 @@
+# property configurator test file
+# log4cpp有3个主要的组件：categories（类别）、appenders（附加目的地）、和 layouts（布局）
+# =======================================================================================
+# layout类控制输出日志消息的显示样式（看起来像什么）。log4cpp当前提供以下layout格式：
+# log4cpp::BasicLayout   // 输出格式:“时间戳 优先级(priority) 类别(category) NDC标签(nested diagnostic contexts): 日志信息”。
+	                     //       如: 1056638652 INFO main : This is some info
+# log4cpp::PatternLayout // 让用户根据类似于 C 语言 printf 函数的转换模式来指定输出格式。格式定义见代码附带文档。
+# log4cpp::SimpleLayout  // 以“优先级（priority） - 日志信息”格式显示。
+# =======================================================================================
+# appender类用来输出日志（被layout格式化后的）到一些设备上。比如文件、syslog服务、某个socket等。
+# 可以定义自己的appender类输出日志信息到别的设备上，比如应用自身的日子处理进程、数据库等。
+# appender和layout的关系是layout附在appender上，appender类调用layout处理完日志消息后，记录到某个设备上。
+# log4cpp当前提供以下appender：
+#>log4cpp::IdsaAppender 		// 发送到IDS或者logger, 详细见 http://jade.cs.uct.ac.za/idsa/
+#>log4cpp::FileAppender 		// 输出到文件
+#>log4cpp::RollingFileAppender 	// 输出到回卷文件，即当文件到达某个大小后回卷
+#>log4cpp::OstreamAppender 		// 输出到一个ostream类
+#>log4cpp::RemoteSyslogAppender // 输出到远程syslog服务器
+#>log4cpp::StringQueueAppender 	// 内存队列
+#>log4cpp::SyslogAppender 		// 本地syslog
+#>log4cpp::Win32DebugAppender 	// 发送到缺省系统调试器
+#>log4cpp::NTEventLogAppender 	// 发送到win 事件日志
+# ========================================================================================
+# category 类真正完成记录日志功能，两个主要组成部分是appenders和priority（优先级）。
+# category类和appender的关系是，多个appender附在category上，这样一个日志消息可以同时输出到多个设备上。
+# ========================================================================================
+# category被组织成一个树，子category创建时优先级缺省NOTSET，category缺省会继承父category的appender。
+# 而如果不希望这种appender的继承关系，log4cpp允许使用additivity 标签，为false时新的appender取代category的appender列表。
+#
+# Log4cpp主要提供了 log4cpp::PropertyConfigurator 和log4cpp::SimpleConfigurator两种机制（文件格式）
+# 以下为采用PropertyConfigurator的配置文件驱动方式:
+# =========================================================================================
+# log4j / log4cpp . [category / appender].[category or appender 's name].[category or appender 's property] 
+# = [Appender / Layout / property's value / Priority, appender name1 [appender name2 ...]]
+# 	[appender]
+# 		{ConsoleAppender}
+# 		{FileAppender}	// 当appender的类型是FileAppender时，可以定义它下面的属性。
+# 			[fileName]	string	foobar	// 格式是：属性名 值的类型 缺省值
+# 			[append]	bool	true
+# 		{RollingFileAppender}
+# 			[fileName] 	string	foobar
+# 			[maxFileSize]	num	10*1024*1024
+# 			[maxBackupIndex]	num	1
+# 			[append]	bool	true
+# 		{SyslogAppender}
+# 			[syslogName]	string	syslog
+# 			[syslogHost]	string	localhost
+# 			[facility]	num	-1	// * 8 to get LOG_KERN, etc. compatible values. 
+# 			[portNumber]	num	-1
+# 		{IdsaAppender}
+# 			[idsaName]	string	foobar
+# 		{Win32DebugAppender}
+# 		{NTEventLogAppender}
+# 			[source]	string	foobar
+# 			
+# 			[threshold]	string ""	// 全部 
+# 			// 如果此类型appender需要layout，必须定义此appender的下面属性
+# 			[layout]
+# 				{BasicLayout}	
+# 				{SimpleLayout}
+# 				{PatternLayout}		// 当layout的值是BasicLayout时，需要定义下面的属性。
+# 					[ConversionPattern]
+# 					
+# 	[rootCategory]
+# 	[additivity]
+# 		[category name]	bool	true
+# =========================================================================================
+# 根类别root category的配置项:
+# rootCategory=日志层级, Appender名字, Appender名字
+# 子类别sub category的配置项:
+# log4cpp.category.子类别=日志级别,, Appender名字, Appender名字
+# =========================================================================================
+# 附加目的地Appender的配置项:
+# log4cpp.appender.附加设备名=附加设备类型
+# log4cpp.appender.附加设备名.layout=布局类型
+# log4cpp.appender.附加设备名.filename=日志文件名
+# log4cpp.appender.附加设备名.layout.ConversionPattern=输出格式
+# =========================================================================================
+# 
+# NOTSET < DEBUG < INFO < NOTICE < WARN < ERROR < CRIT < ALERT < FATAL = EMERG
+#
+
+###########################################################################
+# 定义root category属性
+###########################################################################
+log4cpp.rootCategory=DEBUG, rootAppender
+log4cpp.appender.rootAppender.threshold=DEBUG
+log4cpp.appender.rootAppender=ConsoleAppender
+log4cpp.appender.rootAppender.layout=PatternLayout
+log4cpp.appender.rootAppender.layout.ConversionPattern=[%c,%p]%m%n
+#log4cpp.appender.rootAppender.layout.ConversionPattern=[%d{%Y-%m-%d %H:%M:%S.%l},%c,%p] %m%n
+
+# [ ConsoleAppender ]
+# Colors: 0 - BLACK, 1 - RED, 2 - GREEN,  3 - BROWN, 4 - BLUE, 5 - MAGENTA, 6 -  CYAN, 7 - GREY, 
+#         8 - YELLOW, 9 - LRED, 10 - LGREEN, 11 - LBLUE, 12 - LMAGENTA, 13 - LCYAN, 14 - WHITE
+# Default: "" - none colors
+#          "13 7 11 9" - for example :)
+# Color for messages, format: "normal_color details_color debug_color error_color"
+log4cpp.appender.rootAppender.color=13 14 10 9
+
+###########################################################################
+# 定义sub category属性
+###########################################################################
+log4cpp.category.debug=DEBUG, A0
+log4cpp.additivity.debug=false
+
+log4cpp.category.info=INFO, A0, A1
+log4cpp.additivity.info=false
+
+log4cpp.category.notice=NOTICE, A0, A1
+log4cpp.additivity.notice=false
+
+log4cpp.category.error=ERROR, A0, A1
+log4cpp.additivity.error=false
+
+log4cpp.category.warn=WARN, A0, A1
+log4cpp.additivity.warn=false
+
+log4cpp.category.crit=CRIT, A0, A1
+log4cpp.additivity.crit=false
+
+log4cpp.category.alert=ALERT, A0, A1
+log4cpp.additivity.alert=false
+
+log4cpp.category.emerg=EMERG, A0, A1
+log4cpp.additivity.emerg=false
+
+log4cpp.category.main=DEBUG, A0, A1
+log4cpp.additivity.main=false
+
+###########################################################################
+# 日志输出槽[Appender]的配置段
+###########################################################################
+# 定义appender A0属性 [Console]
+log4cpp.appender.A0=ConsoleAppender
+log4cpp.appender.A0.color=13 14 10 9
+log4cpp.appender.A0.layout=PatternLayout
+log4cpp.appender.A0.layout.ConversionPattern=%m%n
+
+# 定义appender A1属性 [File]
+log4cpp.appender.A1=RollingFileAppender
+log4cpp.appender.A1.fileName=./log/%Y%m%d/inner_trace.log
+log4cpp.appender.A1.maxFileSize=134217728
+log4cpp.appender.A1.maxBackupIndex=10
+log4cpp.appender.A1.layout=PatternLayout
+log4cpp.appender.A1.layout.ConversionPattern=%m%n
+
+# 定义appender A2属性 [Win32Debug]
+log4cpp.appender.A2=Win32DebugAppender
+log4cpp.appender.A2.layout=PatternLayout
+log4cpp.appender.A2.layout.ConversionPattern=%m%n
+

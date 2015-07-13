@@ -1,0 +1,40 @@
+已合并源码：
+exchange
+price
+KnownContract
+
+ArbitrageComparablePriceExpression
+Commodity
+Contract
+pricesource
+新增Utils,将leg中全局方法放入
+
+DiffExpression
+Condition
+
+Dealer
+Order
+Uuid
+CancelQueue
+
+HoldingCounter
+HoldingGuard
+Strategy
+ArbitrageStrategy
+
+DayTradingStrategy
+TwoLegStrategy
+Leg
+ShootStrategy
+FishStrategy
+FishShootStrategy
+Persistence
+ImportExpression
+IntentionPair
+DealHistory
+
+LogPriceStrategy X
+NameConverter X
+Rate X
+
+
